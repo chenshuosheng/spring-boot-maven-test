@@ -1,0 +1,101 @@
+server:
+  port: 9878
+
+spring:
+  application:
+    name: database-manage
+  redis:
+    host: localhost
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test_excel
+    username: root
+    password: 123456
+
+    #应用程序将使用Druid作为数据源来管理数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20  # 初始化连接数
+      min-idle: 10      # 最小空闲连接数
+      max-active: 100   # 最大活动连接数
+      max-evictable-idle-time-millis: 500000000   #500秒
+
+#解决循环依赖问题
+  main:
+    allow-circular-references: true
+
+---
+#第二个文档
+mybatis-plus:
+  configuration:
+    #将数据库列名下划线转换为Java驼峰命名法
+    map-underscore-to-camel-case: true
+    #配置日志输出实现类
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+---
+#第三个文档
+father:
+  name: CYK
+  age: 54
+  birthday: 1970/12/00
+  has-child: true
+  children:
+    - name: CSX
+      age: 27
+      birthday: 1996/01/01
+      dogs:
+        - name: 二哈
+          age: 3
+          color: 1
+        - name: 小黄
+          age: 2
+          color: 4
+      cats:
+        lihua:
+          name: 狸花猫
+          age: 3
+          color: 4
+        ragdoll:
+          name: 布偶猫
+          age: 2
+          color: 1
+    - name: CSR
+      age: 26
+      birthday: 1997/08/01
+      dogs:
+        - name: 小白
+          age: 3
+          color: 1
+        - name: 才子
+          age: 2
+          color: 4
+      cats:
+        lihua:
+          name: 狸花猫2
+          age: 3
+          color: 4
+        ragdoll:
+          name: 布偶猫2
+          age: 2
+          color: 1
+
+
+---
+#第四个文档
+logging:
+  level:
+    root: info #root代表整个系统都打印指定级别及以上的日志，默认为info #请求接口时，几乎所有的请求信息都会被打印
+    css.module.tryRedis.TryRedisController: warn  #指定特定类的日志级别
+  file:
+    name: databasemanage.log    #日志默认只打印到控制台，指定文件名，将日志写到项目同一目录下，进行持久化
+    max-size: 100KB
+  #path: D:\\                   #指定日志文件存储路径，默认文件名为spring.log，当同时指定name和path时，以name为准
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd HH:mm:ss:SSS}.%i.gz #格式：${文件名}.%d{当前日期格式}.%第i个文件.gz(以压缩文件保存)
+
+
+
