@@ -12,6 +12,7 @@
     <modules>
         <module>database-manage</module>
         <module>reflex</module>
+        <module>mybatis-test</module>
     </modules>
 
     <properties>

@@ -1,0 +1,32 @@
+server:
+  port: 9876
+
+spring:
+  application:
+    name: testMybatis
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test_excel
+    username: root
+    password: 123456
+
+    #应用程序将使用Druid作为数据源来管理数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20  # 初始化连接数
+      min-idle: 10      # 最小空闲连接数
+      max-active: 100   # 最大活动连接数
+
+
+mybatis:
+  configuration:
+    #将数据库列名下划线转换为Java驼峰命名法
+    map-underscore-to-camel-case: true
+    #配置日志输出实现类
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #配置mapper映射文件的位置
+  mapper-locations: classpath:mapper/*.xml
+
+
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?><!--xml文件的声明-->
+<!--当前文件的约束，规定当前的配置文件中能够所使用的标签-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--根标签-->
+<!--mapper接口和映射文件要保证两个一致：
+1.mapper接口的全类名和映射文件的namespace一致
+2.mapper接口中的方法的方法名要和映射文件中的sql的id保持一致
+-->
+<mapper namespace="css.testmybatis.mapper.InputDataMapper">
+
+    <sql id="basic">
+        `input_data`(stu_id,stu_name,age,sex,birthday)
+    </sql>
+
+    <insert id="saveAll" parameterType="java.util.List">
+        insert into
+            <include refid="basic"/>
+            values
+        <foreach collection="list" item="data" separator=",">
+            (#{data.stuId},#{data.stuName},#{data.age},#{data.sex},#{data.birthday})
+        </foreach>
+    </insert>
+
+    <select id="queryById" parameterType="integer" resultType="css.testmybatis.entity.InputData">
+        select * from `input_data` where id = #{id}
+    </select>
+
+    <select id="queryList" resultType="css.testmybatis.entity.InputData">
+        select * from `input_data`
+    </select>
+
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(*) from `input_data`
+    </select>
+
+    <select id="pageByLimit" resultType="css.testmybatis.entity.InputData">
+        select * from input_data limit ${index},${pageSize}
+    </select>
+
+    <select id="pageByRowBounds" resultType="css.testmybatis.entity.InputData">
+        select * from input_data
+    </select>
+
+</mapper>
