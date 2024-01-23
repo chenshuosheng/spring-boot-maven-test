@@ -11,98 +11,106 @@
 
     <modules>
         <module>database-manage</module>
+        <module>reflex</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>2020.0.3</spring-cloud.version>
-        <spring-boot.version>2.5.2</spring-boot.version>
-        <actuator.version>2.5.2</actuator.version>
-        <!--        <eureka.version>3.0.3</eureka.version>-->
-        <gateway.version>3.0.7</gateway.version>
-        <spring-cloud-starter-openfeign.version>3.0.4</spring-cloud-starter-openfeign.version>
-        <spring-boot-admin.version>2.4.1</spring-boot-admin.version>
-        <swagger.version>2.9.2</swagger.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <fastjson.version>1.2.78</fastjson.version>
-        <knife4j-spring-boot-starter.version>2.0.9</knife4j-spring-boot-starter.version>
+
+        <spring-boot.version>2.5.2</spring-boot.version>
+        <actuator.version>2.5.2</actuator.version>
+        <spring-security.version>5.6.2</spring-security.version>
+        <spring-boot-admin.version>2.4.1</spring-boot-admin.version>
+        <spring-boot-starter-validation.version>2.5.4</spring-boot-starter-validation.version>
+
+        <spring-boot-starter-amqp.version>2.7.7</spring-boot-starter-amqp.version>
+        <spring-cloud-starter-bus-amqp.version>3.0.2</spring-cloud-starter-bus-amqp.version>
+
+        <spring-cloud.version>2020.0.3</spring-cloud.version>
+        <spring-cloud-starter-openfeign.version>3.0.4</spring-cloud-starter-openfeign.version>
+        <spring-cloud-starter-bootstrap.version>3.1.0</spring-cloud-starter-bootstrap.version>
+        <spring-cloud-loadbalancer.version>3.0.4</spring-cloud-loadbalancer.version>
+        <spring-cloud-alibaba-dependencies.version>2021.1</spring-cloud-alibaba-dependencies.version>
+        <gateway.version>3.0.7</gateway.version>
+
+        <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
+        <mybatis-generator-core.version>1.4.0</mybatis-generator-core.version>
+        <myBatisGeneratorPlugins.version>1.2</myBatisGeneratorPlugins.version>
+        <pagehelper-spring-boot-starter.version>1.3.0</pagehelper-spring-boot-starter.version>
+
+        <mybatis-plus.version>3.4.0</mybatis-plus.version>
+
         <spring-boot-starter-data-redis.version>2.5.4</spring-boot-starter-data-redis.version>
+        <redisson.version>3.16.3</redisson.version>
+        <spring-session-data-redis.version>2.7.0</spring-session-data-redis.version>
+        <commons-pool2.version>2.11.1</commons-pool2.version>
+
+        <mysql-connector-java.version>8.0.26</mysql-connector-java.version>
+        <mysql-connector-j.version>8.0.33</mysql-connector-j.version>
+        <mssql-jdbc.version>9.2.1.jre8</mssql-jdbc.version>
+        <druid-spring-boot-starter.version>1.2.20</druid-spring-boot-starter.version>
+        <dynamic-datasource-spring-boot-starter.version>3.4.1</dynamic-datasource-spring-boot-starter.version>
+        <sqlite-jdbc.version>3.36.0.1</sqlite-jdbc.version>
+        <influxdb-client-java.version>6.9.0</influxdb-client-java.version>
+
+        <swagger.version>2.9.2</swagger.version>
+        <knife4j-spring-boot-starter.version>2.0.9</knife4j-spring-boot-starter.version>
         <!--<springfox-swagger.version>2.9.2</springfox-swagger.version>-->
         <springfox-swagger.version>3.0.0</springfox-swagger.version>
         <swagger-annotations.version>1.5.24</swagger-annotations.version>
         <swagger-models.version>1.5.24</swagger-models.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
-        <commons-lang3.version>3.12.0</commons-lang3.version>
-        <commons-pool2.version>2.11.1</commons-pool2.version>
-        <pagehelper-spring-boot-starter.version>1.3.0</pagehelper-spring-boot-starter.version>
-        <sqlite-jdbc.version>3.36.0.1</sqlite-jdbc.version>
-        <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
-        <mybatis-generator-core.version>1.4.0</mybatis-generator-core.version>
-        <mysql-connector-java.version>8.0.26</mysql-connector-java.version>
-        <mysql-connector-j.version>8.0.33</mysql-connector-j.version>
-        <pdfbox.version>2.0.24</pdfbox.version>
-        <myBatisGeneratorPlugins.version>1.2</myBatisGeneratorPlugins.version>
-        <bcprov-jdk15on.version>1.69</bcprov-jdk15on.version>
-        <mssql-jdbc.version>9.2.1.jre8</mssql-jdbc.version>
-        <dynamic-datasource-spring-boot-starter.version>3.4.1</dynamic-datasource-spring-boot-starter.version>
-        <spring-boot-starter-validation.version>2.5.4</spring-boot-starter-validation.version>
-        <redisson.version>3.16.3</redisson.version>
-        <jasypt-spring-boot-starter.version>3.0.4</jasypt-spring-boot-starter.version>
+
         <slf4j-api.version>1.7.32</slf4j-api.version>
-        <log4j-to-slf4j.version>2.15.0</log4j-to-slf4j.version>
-        <log4j-api.version>2.15.0</log4j-api.version>
-        <mybatis-plus-boot-starter.version>3.4.0</mybatis-plus-boot-starter.version>
-        <mybatis-plus-generator.version>3.4.0</mybatis-plus-generator.version>
-        <mybatis-plus-extension.version>3.4.0</mybatis-plus-extension.version>
-        <mybatis-plus-annotation.version>3.4.0</mybatis-plus-annotation.version>
-        <velocity-engine-core.version>2.3</velocity-engine-core.version>
-        <guava.version>31.0.1-jre</guava.version>
+        <log4j.version>2.15.0</log4j.version>
+
         <hutool.version>5.7.21</hutool.version>
-        <poi-ooxml.version>5.2.0</poi-ooxml.version>
-        <gson.version>2.8.7</gson.version>
-        <spring-security.version>5.6.2</spring-security.version>
-        <aliyun-sdk-oss.version>3.10.2</aliyun-sdk-oss.version>
-        <nimbus-jose-jwt.version>9.21</nimbus-jose-jwt.version>
-        <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <lombok.version>1.18.26</lombok.version>
-        <spring-cloud-starter-bus-amqp.version>3.0.2</spring-cloud-starter-bus-amqp.version>
-        <hanlp.version>portable-1.8.3</hanlp.version>
         <hutool-captcha.version>5.8.4</hutool-captcha.version>
         <hutool-all.version>5.8.10</hutool-all.version>
-        <spring-session-data-redis.version>2.7.0</spring-session-data-redis.version>
+
+        <aliyun-sdk-oss.version>3.10.2</aliyun-sdk-oss.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <fastjson.version>1.2.78</fastjson.version>
+        <gson.version>2.8.7</gson.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <jasypt-spring-boot-starter.version>3.0.4</jasypt-spring-boot-starter.version>
+        <pdfbox.version>2.0.24</pdfbox.version>
+        <poi-ooxml.version>5.2.0</poi-ooxml.version>
+        <okio.version>3.3.0</okio.version>
         <httpmime.version>4.5.13</httpmime.version>
+        <!--<lombok.version>1.18.26</lombok.version>-->
+
+        <jackson-datatype-joda.version>2.12.3</jackson-datatype-joda.version>
+        <joda-time.version>2.10.14</joda-time.version>
+        <aviator.version>5.2.7</aviator.version>
+        <netty.version>4.1.6.Final</netty.version>
+
         <libphonenumber.version>8.12.55</libphonenumber.version>
         <geocoder.version>2.191</geocoder.version>
         <prefixmapper.version>2.191</prefixmapper.version>
         <carrier.version>1.181</carrier.version>
+
         <debezium.version>1.9.7.Final</debezium.version>
-        <jackson-datatype-joda.version>2.12.3</jackson-datatype-joda.version>
-        <joda-time.version>2.10.14</joda-time.version>
-        <spring-boot-starter-amqp.version>2.7.7</spring-boot-starter-amqp.version>
-        <!--        <spring-cloud-starter-alibaba-nacos-config.version>2021.1</spring-cloud-starter-alibaba-nacos-config.version>-->
-        <!--        <spring-cloud-starter-alibaba-nacos-discovery.version>2021.1</spring-cloud-starter-alibaba-nacos-discovery.version>-->
-        <spring-cloud-starter-bootstrap.version>3.1.0</spring-cloud-starter-bootstrap.version>
-        <spring-cloud-loadbalancer.version>3.0.4</spring-cloud-loadbalancer.version>
-        <spring-cloud-alibaba-dependencies.version>2021.1</spring-cloud-alibaba-dependencies.version>
-        <aviator.version>5.2.7</aviator.version>
-        <netty.version>4.1.6.Final</netty.version>
-        <influxdb-client-java.version>6.9.0</influxdb-client-java.version>
-        <okio.version>3.3.0</okio.version>
-        <druid-spring-boot-starter.version>1.2.20</druid-spring-boot-starter.version>
+
+
+        <bcprov-jdk15on.version>1.69</bcprov-jdk15on.version>
+        <guava.version>31.0.1-jre</guava.version>
+        <nimbus-jose-jwt.version>9.21</nimbus-jose-jwt.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <hanlp.version>portable-1.8.3</hanlp.version>
+
     </properties>
     <dependencies>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+
+            <!--Spring Boot项目的依赖管理器，它提供了一组预定义的依赖版本
+                ，用于简化Spring Boot应用程序的构建和管理，通过引入它，
+                    可以方便地管理Spring Boot相关的其它依赖版本，确保它们的兼容性-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -110,43 +118,372 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${actuator.version}</version>
-            </dependency>
-            <!--            <dependency>-->
-            <!--                <groupId>org.springframework.cloud</groupId>-->
-            <!--                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-            <!--                <version>${eureka.version}</version>-->
-            <!--            </dependency>-->
-            <!--            <dependency>-->
-            <!--                <groupId>org.springframework.cloud</groupId>-->
-            <!--                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-            <!--                <version>${eureka.version}</version>-->
-            <!--            </dependency>-->
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-starter-server</artifactId>
-                <version>${spring-boot-admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-gateway</artifactId>
-                <version>${gateway.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
+
+            <!--
+                提供了面向切面编程（AOP）的支持。
+                AOP 是一种编程范式，通过在程序运行时动态地将代码逻辑插入到现有方法中，实现对横切关注点的处理。
+                通过引入该依赖，可以使用 Spring AOP 功能，例如定义切面、切点和通知等，来实现横切关注点的处理，
+                如日志记录、事务管理等。
+                -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-aop</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
 
+            <!--
+                提供了 Spring Security 的集成和配置。
+                Spring Security 是一个功能强大的安全框架，用于保护应用程序的安全性。
+                通过引入该依赖，可以轻松地集成 Spring Security，
+                并使用其提供的认证（Authentication）和授权（Authorization）功能，实现用户身份验证、访问控制等安全机制
+                -->
+            <!--是 Spring Boot 提供的快速启动器，它会自动引入 spring-security-web 和 spring-security-config 依赖，并提供了更加简化的配置方式。-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
 
+            <!--
+                提供了发送电子邮件的支持。它封装了 JavaMail API，并提供了简单易用的接口来发送电子邮件。
+                通过引入该依赖，可以方便地在 Spring Boot 项目中发送电子邮件，
+                例如发送注册确认邮件、重置密码邮件等
+                -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-mail</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+
+            <!--
+                spring-boot-starter-security 提供了自动配置功能，
+                通过引入该依赖，Spring Boot 会自动配置 Spring Security，包括默认的登录页面、用户验证机制等。
+                而 spring-security-web 和 spring-security-config 则需要手动进行配置。
+
+                需要快速集成和配置 Spring Security，推荐使用 spring-boot-starter-security 依赖。
+                若对 Spring Security 框架有更详细的了解并希望手动进行配置，
+                则可以选择引入 spring-security-web 和 spring-security-config 依赖。
+                -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+
+            <!-- 它是Spring Boot的一个模块，用于监控和管理Spring Boot应用程序的运行时行为
+                它提供了一系列的端点（endpoints），可以用于获取应用程序的健康状态、度量指标、配置信息等。
+                通过引入该依赖，可以轻松地添加监控和管理功能到 Spring Boot 应用程序中-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${actuator.version}</version>
+            </dependency>
+
+            <!--
+                Spring Boot 应用程序管理工具，可以帮助我们监控和管理多个 Spring Boot 应用程序的运行状态、性能指标、配置信息等。
+                通过引入该依赖，可以快速集成 Spring Boot Admin 服务器，并在 Web 界面上查看应用程序的运行状态和监控数据
+                -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot-admin.version}</version>
+            </dependency>
+
+            <!--
+                Spring Boot 提供的校验功能的起步依赖，用于在应用程序中进行数据验证。
+                通过引入该依赖，可以在实体类中使用注解来定义验证规则，并在处理请求时进行数据校验
+                -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+                <version>${spring-boot-starter-validation.version}</version>
+            </dependency>
+
+
+            <!--**********************************消息队列**********************************-->
+            <!--
+            Spring Boot 提供的 AMQP（高级消息队列协议）支持的起步依赖，
+            可以帮助我们在应用程序中使用 RabbitMQ 或其他 AMQP 兼容的消息队列
+            -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-boot-starter-amqp.version}</version>
+            </dependency>
+
+            <!--
+            Spring Cloud 提供的用于消息总线功能的 AMQP 实现的起步依赖。通过引入该依赖，
+            可以在微服务架构中使用 Spring Cloud Bus 和 AMQP 实现消息总线，从而实现配置的集中管理和动态刷新等功能。
+            -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+                <version>${spring-cloud-starter-bus-amqp.version}</version>
+            </dependency>
+
+
+            <!--**********************************微服务**********************************-->
+            <!--Spring Cloud项目的依赖管理器，它提供了一组预定义的依赖版本
+            ，用于简化Spring Cloud应用程序的构建和管理，通过引入它，
+            可以方便地管理Spring Cloud相关的其它依赖版本，确保它们的兼容性-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--
+            是 Spring Cloud OpenFeign 的起步依赖，用于在微服务架构中实现服务间的声明式调用。
+            通过引入该依赖，可以使用 Feign 来定义和调用其他微服务的接口
+            -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-starter-openfeign.version}</version>
+            </dependency>
+
+            <!--
+            Spring Cloud Config 的起步依赖，用于在微服务架构中实现集中化的配置管理。
+            通过引入该依赖，可以使用 Spring Cloud Config 来从配置服务器获取应用程序的配置信息
+            -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bootstrap</artifactId>
+                <version>${spring-cloud-starter-bootstrap.version}</version>
+            </dependency>
+
+            <!--
+            Spring Cloud LoadBalancer 的起步依赖，用于在微服务架构中实现负载均衡的功能。
+            通过引入该依赖，可以使用 Spring Cloud LoadBalancer 来在客户端实现负载均衡策略
+            -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-loadbalancer</artifactId>
+                <version>${spring-cloud-loadbalancer.version}</version>
+            </dependency>
+
+            <!--
+            Spring Cloud Alibaba 的父级依赖，用于引入 Spring Cloud Alibaba 相关的依赖。
+            通过引入该依赖，可以使用 Spring Cloud Alibaba 提供的功能，
+            如服务注册与发现、配置管理、分布式事务等
+            -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--
+            用于在 Spring Boot 项目中快速实现 API 网关的功能。
+            Spring Cloud Gateway 是一个基于 Spring Framework 和 Spring Boot 的轻量级网关，
+            支持路由、限流、重试、安全等多种功能，可以帮助我们构建高效、弹性和安全的微服务架构
+            -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
+
+
+            <!--**********************************MyBatis相关**********************************-->
+            <!--在 Spring Boot 应用程序中集成 MyBatis 框架，自动配置 MyBatis 相关的组件和属性-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!--
+                MyBatis 官方提供的一个代码生成器，它可以根据数据库表结构自动生成对应的 MyBatis Mapper 接口和 XML 文件。
+                通过引入该依赖，可以在项目中运行 MyBatis Generator 来自动生成 Mapper 和 XML 文件，从而加快开发效率
+                -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis-generator-core.version}</version>
+            </dependency>
+
+            <!--
+                第三方的 MyBatis Generator 插件库，它提供了一些有用的插件，如 Lombok 插件、Mapper 注解插件等。
+                通过引入该依赖，可以在 MyBatis Generator 中使用这些插件来提升代码的可读性和易用性。
+                -->
+            <dependency>
+                <groupId>com.github.misterchangray.mybatis.generator.plugins</groupId>
+                <artifactId>myBatisGeneratorPlugins</artifactId>
+                <version>${myBatisGeneratorPlugins.version}</version>
+            </dependency>
+
+            <!--提供了 PageHelper 在 Spring Boot 中的集成支持。通过引入该依赖，可以在 Spring Boot 项目中轻松地使用 PageHelper 来进行分页查询-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+
+
+            <!--**********************************MyBatis-Plus相关**********************************-->
+            <!-- 集成MyBatis-Plus框架，简化MyBatis的使用 -->
+            <!--
+                是 MyBatis Plus 的核心依赖，提供了集成 MyBatis Plus 框架所需的基本功能。
+                它包含了 MyBatis Plus 的核心库、自动配置和一些常用的增强功能，
+                可以简化 MyBatis Plus 在 Spring Boot 项目中的集成和配置。
+                -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--
+                它是 MyBatis Plus 的代码生成器模块。它提供了一个代码生成器工具，
+                可以根据数据库表结构自动生成对应的实体类、Mapper 接口和 XML 映射文件。
+                通过引入该依赖，可以方便地生成符合规范的代码，提高开发效率
+                -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--
+            已经包含在mybatis-plus-generator中了
+                是 MyBatis Plus 的扩展模块，提供了一些额外的功能和扩展点。
+                它包含了一些常用的插件、拦截器和扩展接口，可以用于定制和增强 MyBatis Plus 的功能。
+                通过引入该依赖，可以灵活地扩展 MyBatis Plus 的能力
+                -->
+            <!--<dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>-->
+
+            <!--
+                是 MyBatis Plus 的注解模块。它提供了一些注解，用于简化 MyBatis Plus 的配置和使用。
+                例如，@TableName 注解用于指定实体类对应的数据库表名，@TableField 注解用于指定字段与列的映射关系等。
+                通过引入该依赖，可以使用这些注解来简化 MyBatis Plus 的操作。
+                -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+
+            <!--**********************************redis相关**********************************-->
+            <!--
+                Spring Boot 提供的用于集成 Redis 的起步依赖，
+                它包含了一系列必要的依赖和配置，可快速搭建与 Redis 数据库的连接和操作
+            -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-starter-data-redis.version}</version>
+            </dependency>
+
+            <!--
+                Redisson 官方提供的一个 Redis Java 客户端，它支持各种数据结构、分布式锁、延迟队列、分布式限流等功能。
+                通过引入该依赖，可以在 Spring Boot 应用程序中轻松使用 Redisson 客户端，并利用其丰富的功能来实现分布式应用程序
+                -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!--
+                 Spring Session 官方提供的一个基于 Redis 存储的会话管理模块。
+                 通过引入该依赖，可以使用 Spring 提供的 Session API 来管理用户会话，并将会话数据存储到 Redis 数据库中。
+                 该模块还提供了一些高级特性，如集群部署、跨域共享会话等
+                -->
+            <dependency>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session-data-redi</artifactId>
+                <version>${spring-session-data-redis.version}</version>
+            </dependency>
+
+            <!-- redis依赖commons-pool 这个依赖一定要添加 -->
+            <!--
+                Apache Commons Pool2 是一个通用的对象池实现，用于管理对象的创建、借用、归还和销毁。
+                它提供了一套简单易用的 API，能够帮助我们更有效地管理和复用对象，减少资源的创建和销毁开销，提高系统性能。
+
+                在引入 Redis 作为缓存或数据存储时，通常会使用对象池来管理 Redis 连接对象，以便更好地管理连接资源。
+                org.apache.commons:commons-pool2 是 Redis 客户端在连接池方面的依赖，它提供了连接池所需的功能和工具类。
+                -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons-pool2.version}</version>
+            </dependency>
+
+
+            <!--**********************************数据库相关**********************************-->
+
+            <!--连接 MySQL 数据库的驱动程序-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <!--mysql-connector-java的扩展，性能更好-->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+            </dependency>
+
+            <!--用于在 Java 应用程序中与 Microsoft SQL Server 数据库进行通信。
+            通过引入该依赖，可以使用 JDBC API 来连接数据库、执行 SQL 查询和更新等操作-->
+            <dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>mssql-jdbc</artifactId>
+                <version>${mssql-jdbc.version}</version>
+            </dependency>
+
+            <!--用于简化在 Spring Boot 项目中使用 Druid 数据库连接池的配置和集成。
+            它封装了 Druid 的相关依赖和配置，提供了自动配置和监控功能。-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!--用于支持动态数据源切换-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-datasource-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!--
+                SQLite 官方提供的一个 JDBC 驱动，可帮助你在 Java 应用程序中访问和操作 SQLite 数据库。
+                通过引入该依赖，可以使用标准的 JDBC API 来连接 SQLite 数据库，并执行 SQL 语句进行数据存储和检索操作
+                -->
+            <dependency>
+                <groupId>org.xerial</groupId>
+                <artifactId>sqlite-jdbc</artifactId>
+                <version>${sqlite-jdbc.version}</version>
+            </dependency>
+
+            <!--InfluxDB 的 Java 客户端库，用于与 InfluxDB 时间序列数据库进行交互-->
+            <dependency>
+                <groupId>com.influxdb</groupId>
+                <artifactId>influxdb-client-java</artifactId>
+                <version>${influxdb-client-java.version}</version>
+            </dependency>
+
+
+            <!--**********************************api文档相关**********************************-->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
@@ -179,439 +516,314 @@
                 <version>${swagger-bootstrap-ui.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>${spring-boot-starter-data-redis.version}</version>
-            </dependency>
-            <!-- redis依赖commons-pool 这个依赖一定要添加 -->
-            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>${commons-pool2.version}</version>
-            </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper-spring-boot-starter.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.xerial</groupId>
-                <artifactId>sqlite-jdbc</artifactId>
-                <version>${sqlite-jdbc.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-spring-boot-starter.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
-            <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>${mybatis-generator-core.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql-connector-java.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.mysql</groupId>
-                <artifactId>mysql-connector-j</artifactId>
-                <version>${mysql-connector-j.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
-            <dependency>
-                <groupId>org.apache.pdfbox</groupId>
-                <artifactId>pdfbox</artifactId>
-                <version>${pdfbox.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.github.misterchangray.mybatis.generator.plugins</groupId>
-                <artifactId>myBatisGeneratorPlugins</artifactId>
-                <version>${myBatisGeneratorPlugins.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk15on</artifactId>
-                <version>${bcprov-jdk15on.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
-            <dependency>
-                <groupId>com.microsoft.sqlserver</groupId>
-                <artifactId>mssql-jdbc</artifactId>
-                <version>${mssql-jdbc.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${spring-cloud-starter-openfeign.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.baomidou/dynamic-datasource-spring-boot-starter -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-                <version>${dynamic-datasource-spring-boot-starter.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-validation</artifactId>
-                <version>${spring-boot-starter-validation.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.redisson</groupId>
-                <artifactId>redisson</artifactId>
-                <version>${redisson.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter -->
-            <dependency>
-                <groupId>com.github.ulisesbocchio</groupId>
-                <artifactId>jasypt-spring-boot-starter</artifactId>
-                <version>${jasypt-spring-boot-starter.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <!--**********************************日志相关**********************************-->
+            <!--
+                是一个简单的日志门面接口，它定义了一组用于日志记录的通用 API。
+                它并不依赖具体的日志实现库，而是为各种日志实现库提供了一个统一的 “抽象层”。
+                因此，它可以和 Log4j、Logback 等多种日志框架配合使用
+                -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j-api.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-to-slf4j -->
+            <!--
+                是一个 Log4j 到 SLF4J 的适配器，它将 Log4j 日志框架的日志输出转发到 SLF4J 接口。
+                如果在项目中使用了 Log4j 日志框架，但希望统一使用 SLF4J 进行日志输出，可以引入该依赖
+                -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-to-slf4j</artifactId>
-                <version>${log4j-to-slf4j.version}</version>
+                <version>${log4j.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+            <!--
+                 Log4j 日志框架的核心 API，它定义了一组用于配置和管理日志输出的接口和类。
+                 它依赖于 org.slf4j:slf4j-api，因为 Log4j 框架实现了 SLF4J API，
+                 并且需要通过 SLF4J 适配器 org.apache.logging.log4j:log4j-to-slf4j 将日志输出转发到 SLF4J 接口
+                -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
-                <version>${log4j-api.version}</version>
+                <version>${log4j.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus-boot-starter.version}</version>
-            </dependency>
 
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-generator</artifactId>
-                <version>${mybatis-plus-generator.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis-plus-extension.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-annotation</artifactId>
-                <version>${mybatis-plus-annotation.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
-            <dependency>
-                <groupId>org.apache.velocity</groupId>
-                <artifactId>velocity-engine-core</artifactId>
-                <version>${velocity-engine-core.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-poi -->
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-poi</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
-                <version>${poi-ooxml.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-mail</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-security</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.code.gson</groupId>
-                <artifactId>gson</artifactId>
-                <version>${gson.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-web</artifactId>
-                <version>${spring-security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-config</artifactId>
-                <version>${spring-security.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun-sdk-oss.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.nimbusds</groupId>
-                <artifactId>nimbus-jose-jwt</artifactId>
-                <version>${nimbus-jose-jwt.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct-jdk8 -->
-            <dependency>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct</artifactId>
-                <version>${mapstruct.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-                <version>${spring-cloud-starter-bus-amqp.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.hankcs</groupId>
-                <artifactId>hanlp</artifactId>
-                <version>${hanlp.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-captcha</artifactId>
-                <version>${hutool-captcha.version}</version>
-            </dependency>
-
+            <!--**********************************hutool**********************************-->
+            <!--Hutool 工具包的完整版本，包含了所有的模块和功能-->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool-all.version}</version>
             </dependency>
 
+            <!--Hutool 工具包中的验证码模块。它提供了生成图片验证码和校验验证码的功能-->
             <dependency>
-                <groupId>org.springframework.session</groupId>
-                <artifactId>spring-session-data-redis</artifactId>
-                <version>${spring-session-data-redis.version}</version>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-captcha</artifactId>
+                <version>${hutool-captcha.version}</version>
             </dependency>
 
+            <!--
+                POI 是一个用于读写 Microsoft Office 格式文件（如 Excel、Word 等）的 Java 库，
+                Hutool 的 POI 模块提供了对 POI 的封装和简化，使得操作 Office 文件更加便捷
+                -->
             <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpmime</artifactId>
-                <version>${httpmime.version}</version>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-poi</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
+
+            <!--**********************************常用工具**********************************-->
+            <!--阿里云对象存储 OSS 的 Java SDK-->
             <dependency>
-                <groupId>com.googlecode.libphonenumber</groupId>
-                <artifactId>libphonenumber</artifactId>
-                <version>${libphonenumber.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.libphonenumber</groupId>
-                <artifactId>geocoder</artifactId>
-                <version>${geocoder.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.libphonenumber</groupId>
-                <artifactId>prefixmapper</artifactId>
-                <version>${prefixmapper.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.libphonenumber</groupId>
-                <artifactId>carrier</artifactId>
-                <version>${carrier.version}</version>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-sdk-oss.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/io.debezium/debezium-api -->
+            <!--引入该依赖，你可以在项目中使用 Apache Commons Lang3 提供的功能，
+            如字符串截取、填充、判空、格式化，数组操作、合并、查找，日期时间格式化、计算等-->
             <dependency>
-                <groupId>io.debezium</groupId>
-                <artifactId>debezium-api</artifactId>
-                <version>${debezium.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/io.debezium/debezium-embedded -->
-            <dependency>
-                <groupId>io.debezium</groupId>
-                <artifactId>debezium-embedded</artifactId>
-                <version>${debezium.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/io.debezium/debezium-connector-mysql -->
-            <dependency>
-                <groupId>io.debezium</groupId>
-                <artifactId>debezium-connector-mysql</artifactId>
-                <version>${debezium.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/io.debezium/debezium-connector-sqlserver -->
-            <dependency>
-                <groupId>io.debezium</groupId>
-                <artifactId>debezium-connector-sqlserver</artifactId>
-                <version>${debezium.version}</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
+            <!--提供了一系列 API，包括将 Java 对象序列化为 JSON 字符串、
+            将 JSON 字符串反序列化为 Java 对象、JSON 字符串解析、JSON 数组操作等等-->
             <dependency>
-                <groupId>joda-time</groupId>
-                <artifactId>joda-time</artifactId>
-                <version>${joda-time.version}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
 
+            <!--
+                Fastjson 在序列化和反序列化的性能方面相对较高，并提供了一些高级特性，
+                如支持自定义序列化和反序列化规则、支持日期格式化等
+                Gson 也具有良好的性能，但在某些场景下可能不如 Fastjson。Gson 提供了一些简便的方法来处理 JSON 数据，
+                如直接将 JSON 字符串转换为 Java 对象，但相应地可能会牺牲一些灵活性和可定制性-->
+
+            <!--Gson 是一个用于在 Java 对象和 JSON 数据之间进行序列化和反序列化的库。它提供了简单易用的 API，
+            可以方便地将 Java 对象转换为 JSON 字符串，以及将 JSON 字符串转换为 Java 对象-->
             <dependency>
-                <groupId>com.fasterxml.jackson.datatype</groupId>
-                <artifactId>jackson-datatype-joda</artifactId>
-                <version>${jackson-datatype-joda.version}</version>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
             </dependency>
 
+            <!--Apache Velocity 是一个模板引擎，用于将模板与数据进行合并生成输出。
+            Velocity 使用简单而又灵活的模板语法，可以应用于各种场景，如生成网页、邮件、代码等-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-amqp</artifactId>
-                <version>${spring-boot-starter-amqp.version}</version>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity-engine-core.version}</version>
             </dependency>
 
-            <!--            &lt;!&ndash; https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-config &ndash;&gt;-->
-            <!--            <dependency>-->
-            <!--                <groupId>com.alibaba.cloud</groupId>-->
-            <!--                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-            <!--                <version>${spring-cloud-starter-alibaba-nacos-config.version}</version>-->
-            <!--            </dependency>-->
-
-            <!--            &lt;!&ndash; https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-discovery &ndash;&gt;-->
-            <!--            <dependency>-->
-            <!--                <groupId>com.alibaba.cloud</groupId>-->
-            <!--                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-            <!--                <version>${spring-cloud-starter-alibaba-nacos-discovery.version}</version>-->
-            <!--            </dependency>-->
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bootstrap -->
+            <!--Jasypt 是一个用于加密和解密数据的库，它提供了简单易用的 API，
+            可以方便地使用各种加密算法对敏感数据进行加密处理，保护用户数据的安全性-->
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-bootstrap</artifactId>
-                <version>${spring-cloud-starter-bootstrap.version}</version>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt-spring-boot-starter.version}</version>
             </dependency>
 
+            <!--提供了处理 PDF 文档的 API。使用 PDFBox 库，
+            可以创建、编辑和提取 PDF 文档中的内容，包括文本、图像和表单等-->
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-loadbalancer</artifactId>
-                <version>${spring-cloud-loadbalancer.version}</version>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>${pdfbox.version}</version>
             </dependency>
 
+            <!--Apache POI 库的一部分，提供了对 Microsoft Office Open XML 文件格式（如 .docx、.xlsx、.pptx 等）的支持。
+            使用 POI 库，可以读取、创建和编辑 Office Open XML 文件，包括文档、电子表格和幻灯片等-->
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba-dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!--表达式引擎-->
-            <dependency>
-                <groupId>com.googlecode.aviator</groupId>
-                <artifactId>aviator</artifactId>
-                <version>${aviator.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>netty-all</artifactId>
-                <groupId>io.netty</groupId>
-                <version>${netty.version}</version>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi-ooxml.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.influxdb</groupId>
-                <artifactId>influxdb-client-java</artifactId>
-                <version>${influxdb-client-java.version}</version>
-            </dependency>
             <!--InfluxDB使用了okhttp3依赖，不引入这玩意就报错：kotlin/jvm/internal/Intrinsics-->
-            <!-- https://mvnrepository.com/artifact/com.squareup.okio/okio -->
+            <!--一个用于处理 I/O 操作的库，它提供了一套简洁而强大的 API，用于读取、写入和操作数据流-->
             <dependency>
                 <groupId>com.squareup.okio</groupId>
                 <artifactId>okio</artifactId>
                 <version>${okio.version}</version>
             </dependency>
 
+            <!--Apache HttpClient 库的一部分，提供了对 MIME 类型的支持，用于处理 HTTP 请求和响应中的二进制内容-->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid-spring-boot-starter.version}</version>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>${httpmime.version}</version>
             </dependency>
+
+
+            <!--**********************************不常用工具**********************************-->
+            <!--提供了对日期和时间的处理功能，包括日期计算、格式化、解析等-->
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
+            <!-- Jackson 库的一个扩展模块，用于支持将 Joda-Time 对象与 JSON 进行序列化和反序列化-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-joda</artifactId>
+                <version>${jackson-datatype-joda.version}</version>
+            </dependency>
+
+            <!--一个快速、轻量级的表达式求值引擎，可以用于执行复杂的数学和逻辑表达式-->
+            <dependency>
+                <groupId>com.googlecode.aviator</groupId>
+                <artifactId>aviator</artifactId>
+                <version>${aviator.version}</version>
+            </dependency>
+
+            <!--Netty 库的一个全集版本，Netty 是一个基于 Java 的网络应用框架，提供了高性能的网络通信能力-->
+            <dependency>
+                <artifactId>netty-all</artifactId>
+                <groupId>io.netty</groupId>
+                <version>${netty.version}</version>
+            </dependency>
+
+            <!--Bouncy Castle 密码提供者库的一个扩展，提供了各种密码学算法和安全功能的支持-->
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov-jdk15on.version}</version>
+            </dependency>
+
+            <!--提供了一组强大的 Java 核心库，包括集合、并发、字符串处理、I/O 等功能-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!--Nimbus JOSE + JWT 库，用于处理 JSON Web Token（JWT）和相关的身份验证和授权协议-->
+            <dependency>
+                <groupId>com.nimbusds</groupId>
+                <artifactId>nimbus-jose-jwt</artifactId>
+                <version>${nimbus-jose-jwt.version}</version>
+            </dependency>
+
+            <!-- Java 注解处理器框架，用于生成类型安全的映射代码，简化 Java 对象之间的转换-->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <!--提供了中文自然语言处理的功能，包括分词、词性标注、命名实体识别等-->
+            <dependency>
+                <groupId>com.hankcs</groupId>
+                <artifactId>hanlp</artifactId>
+                <version>${hanlp.version}</version>
+            </dependency>
+
+
+            <!--**********************************电话号码相关**********************************-->
+            <!--提供了电话号码的核心功能。-->
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>libphonenumber</artifactId>
+                <version>${libphonenumber.version}</version>
+            </dependency>
+
+            <!--用于从电话号码中获取归属地信息的辅助库。-->
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>geocoder</artifactId>
+                <version>${geocoder.version}</version>
+            </dependency>
+
+            <!--用于加载和管理电话号码前缀映射数据的辅助库。-->
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>prefixmapper</artifactId>
+                <version>${prefixmapper.version}</version>
+            </dependency>
+
+            <!--用于从电话号码中获取运营商信息的辅助库。-->
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>carrier</artifactId>
+                <version>${carrier.version}</version>
+            </dependency>
+
+
+            <!--**********************************Debezium相关**********************************-->
+            <!--
+                Debezium 是一个开源的分布式数据库变更数据捕获（CDC）平台，
+                它可以监控数据库的变更，并通过将变更事件转换为可消费的流数据，使得应用程序能够实时地获取到数据库的变更信息。
+                Debezium 支持多种数据库（如 MySQL、PostgreSQL、MongoDB 等）和消息队列（如 Kafka）
+                -->
+            <!--提供了使用 Debezium 的核心接口和类-->
+            <dependency>
+                <groupId>io.debezium</groupId>
+                <artifactId>debezium-api</artifactId>
+                <version>${debezium.version}</version>
+            </dependency>
+            <!--Debezium 的嵌入式模块，允许在应用程序中直接嵌入 Debezium 引擎，实现数据库变更事件的捕获和处理-->
+            <dependency>
+                <groupId>io.debezium</groupId>
+                <artifactId>debezium-embedded</artifactId>
+                <version>${debezium.version}</version>
+            </dependency>
+            <!--Debezium 的 MySQL 连接器模块，用于与 MySQL 数据库进行连接，并捕获数据库变更事件-->
+            <dependency>
+                <groupId>io.debezium</groupId>
+                <artifactId>debezium-connector-mysql</artifactId>
+                <version>${debezium.version}</version>
+            </dependency>
+            <!--Debezium 的 SQL Server 连接器模块，用于与 SQL Server 数据库进行连接，并捕获数据库变更事件-->
+            <dependency>
+                <groupId>io.debezium</groupId>
+                <artifactId>debezium-connector-sqlserver</artifactId>
+                <version>${debezium.version}</version>
+            </dependency>
+            <!---->
+
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <plugins>
-            <!--            <plugin>-->
-            <!--                <groupId>org.springframework.boot</groupId>-->
-            <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-            <!--                <version>2.5.2</version>-->
-            <!--                <configuration>-->
-            <!--                    <source>${maven.compiler.source}</source>-->
-            <!--                    <target>${maven.compiler.target}</target>-->
-            <!--                </configuration>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <goals>-->
-            <!--                            <goal>repackage</goal>-->
-            <!--                        </goals>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
+        <!--<plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>-->
 
-        </plugins>
+        <!-- plugins 标签：构建的时候要用到这些插件 -->
+        <!--<plugins>
+            &lt;!&ndash; plugin 标签：指定的一个具体的插件 &ndash;&gt;
+            <plugin>
+                &lt;!&ndash; 插件的坐标。此处引用的 maven-compiler-plugin 插件不是第三方的，是一个 Maven 自带的插件。 &ndash;&gt;
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+
+                &lt;!&ndash; configuration 标签：配置 maven-compiler-plugin 插件 &ndash;&gt;
+                <configuration>
+                    &lt;!&ndash; 具体配置信息会因为插件不同、需求不同而有所差异 &ndash;&gt;
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>-->
     </build>
 
 </project>

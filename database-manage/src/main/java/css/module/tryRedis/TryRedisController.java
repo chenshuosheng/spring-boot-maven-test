@@ -26,7 +26,7 @@ public class TryRedisController {
     @GetMapping("/incr")
     public ResultVo<String> incr(){
         Long num = stringRedisTemplate.opsForValue().increment("access-num");
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100; i++) {
             log.debug("debug日志执行...");
             log.info("info日志执行...");
             log.warn("warn日志执行...");

@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import css.common.dto.RPage;
 import css.common.util.Filter2QueryWrapperUtil;
 import css.common.util.QueryWrapperOrderUtil;
 import css.common.vo.ListResult;
@@ -57,7 +56,8 @@ public class TableDetailInfoServiceImpl extends ServiceImpl<TableDetailInfoMappe
         QueryWrapper<TableDetailInfo> queryWrapper = Filter2QueryWrapperUtil.instance.handleFilter(filter, TableDetailInfo.COLUMN_MAP);
 
         QueryWrapperOrderUtil.instance.mySqlSingleOrder(queryWrapper, order, TableDetailInfo.COLUMN_MAP);
-        Page<TableDetailInfo> page = this.page(new RPage<>(pageNum, pageSize), queryWrapper);
+        Page<TableDetailInfo> page = new Page<>(pageNum, pageSize);
+        page = this.page(page, queryWrapper);
         return new ListResult<>(page.getTotal(), page.getRecords());
     }
 

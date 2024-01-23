@@ -59,23 +59,26 @@ public class DatabaseInfoController {
             DatabaseInfo databaseInfo = new DatabaseInfo();
             databaseInfo.setDatabaseName(k);
             databaseInfo.setTableNum(0);//在插入数据表时会自增
-            databaseInfo = databaseInfoService.insert(databaseInfo);
-
-            //处理数据表信息
-            List<String> tables = v.getTables();
-            for (String tableName : tables) {
-                //插入数据表简要信息
-                TableInfo tableInfo = tableInfoService.insert(new TableInfo(null, databaseInfo.getId(), tableName, 0));
-                ColumnVo columnVo = null;
-                try {
-                    columnVo = ExecuteSQL.getProperties(databaseInfo, tableInfo);
-                    //更新数据表信息(列数)
-                    tableInfoService.updateById(tableInfo);
-                } catch (SQLException e) {
-                    e.printStackTrace();
+            try {
+                databaseInfo = databaseInfoService.insert(databaseInfo);
+                //处理数据表信息
+                List<String> tables = v.getTables();
+                for (String tableName : tables) {
+                    //插入数据表简要信息
+                    TableInfo tableInfo = tableInfoService.insert(new TableInfo(null, databaseInfo.getId(), tableName, 0));
+                    ColumnVo columnVo = null;
+                    try {
+                        columnVo = ExecuteSQL.getProperties(databaseInfo, tableInfo);
+                        //更新数据表信息(列数)
+                        tableInfoService.updateById(tableInfo);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                    //插入数据表详细信息
+                    tableDetailInfoService.insert(columnVo);
                 }
-                //插入数据表详细信息
-                tableDetailInfoService.insert(columnVo);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }

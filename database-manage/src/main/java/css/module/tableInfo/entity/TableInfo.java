@@ -44,7 +44,7 @@ public class TableInfo implements Serializable {
     @TableField("table_name")
     private String tableName;
 
-    @ApiModelProperty(value = "数据表属性个数")
+    @ApiModelProperty(value = "数据表列数")
     @TableField("column_num")
     private Integer columnNum;
 
